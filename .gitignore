@@ -1,0 +1,6 @@
+*.o
+inputs
+*.hi
+advent01
+*/target
+Cargo.lock
