@@ -4,3 +4,6 @@ inputs
 advent01
 */target
 Cargo.lock
+*.vo
+*.aux
+*.glob
