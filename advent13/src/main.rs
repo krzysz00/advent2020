@@ -61,7 +61,7 @@ fn part_b(ids: &[Option<NonZeroU64>]) -> i64 {
     let len = ids.len() as i64;
     for (a, n) in (std::iter::once(0).chain(1..len))
         .zip(ids.iter().copied())
-        .filter_map(|(a, n)| n.map(|x| (a, x.get() as i64)))
+        .filter_map(|(a, n)| n.map(|x| { let x = x.get() as i64; (((-a % x) + x) % x, x) }))
     {
         println!("{}, {}", a, n);
         let p = prod / n;
